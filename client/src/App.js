@@ -1,9 +1,16 @@
+//importing dependencies
 import './App.css';
 
-function App() {
+//import redux components
+
+//import chat component 
+
+//connect application to redux
+
+const App = () => {
   return (
     <div className="App">
-      Hello World!
+      I am Neumann
     </div>
   );
 }
