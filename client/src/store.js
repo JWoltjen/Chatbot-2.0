@@ -13,7 +13,11 @@ const initialState = {};
 const middleware = [thunk]
 
 //Set up store
-const store = createStore(combineReducers, initialState, composeWithDevTools(...middleware))
+const store = createStore(
+    combineReducers, 
+    initialState, 
+    composeWithDevTools(applyMiddleware(...middleware))
+    );
 
 
 //export that shit

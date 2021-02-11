@@ -2,6 +2,8 @@
 import './App.css';
 
 //import redux components
+import {Provider} from "react-redux"; 
+import store from './store'; 
 
 //import chat component 
 
@@ -9,9 +11,11 @@ import './App.css';
 
 const App = () => {
   return (
-    <div className="App">
-      I am Neumann
-    </div>
+    <Provider store={store}>
+      <div className="App">
+        I am neumann
+     </div>
+     </Provider>
   );
 }
 
