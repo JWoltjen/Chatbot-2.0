@@ -1,0 +1,3 @@
+const INPUT_SUCCESS = "INPUT_SUCCESS"; 
+const INPUT_FAIL = "INPUT_FAIL"; 
+
