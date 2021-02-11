@@ -16,5 +16,20 @@ const assistant = new AssistantV2({
     version: '2021-02-11', 
     authenticator: authenticator,
     url: process.env.WATSON_ASSISTANT_URL
-
 })
+
+//3. Route to handle tokens 
+router.get('/session', async (req, res) => {
+    try{
+        const session = await assistant.createSession({
+            assistantId: process.env.WATSON_ASSISTANT_ID
+        })
+        res.json(session('result'))
+    }catch(err){
+        res.send("There was an error processing your request")
+        console.log(err); 
+    }
+})
+
+
+module.exports = router; 
