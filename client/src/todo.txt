@@ -1,0 +1,9 @@
+1. Set up redux - manage state
+2. set up reducers and action 
+3. set up chat
+4. chat queue
+5. display messages to the user
+6. get and handle session_ids
+7. handle sending our users message to the API
+8. Adding bot responses to queue
+9. Format and stylize components 
