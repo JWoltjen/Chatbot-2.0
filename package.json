@@ -4,7 +4,8 @@
   "description": "a react chatbot",
   "main": "server.js",
   "scripts": {
-    "start": "node server"
+    "start": "node server", 
+    "server": "nodemon server"
   },
   "author": "Jeff Woltjen",
   "license": "ISC",
