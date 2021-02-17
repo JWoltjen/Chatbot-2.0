@@ -28,7 +28,15 @@ export const createSession = () => async (dispatch) => {
         dispatch({type:SESSION_FAIL})
     }
 }
-
-
-
 // Sends message to the bot -API call 
+export const sendMessage = (message) => async (dispatch) => {
+    try{
+        const body = {input:message}
+        const res = axios.post("/api/watson/message", body); 
+        dispatch({
+            type: MESSAGE_SUCCESS,
+            payload: (await res).data.output.generic[0].text})
+    }catch(err){
+        dispatch({type: MESSAGE_FAIL});
+    }
+}

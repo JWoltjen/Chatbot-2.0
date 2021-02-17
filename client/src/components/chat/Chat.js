@@ -2,9 +2,9 @@ import React, {useState} from 'react'
 import {connect} from 'react-redux'
 
 //import action 
-import {userMessage} from '../../actions/watson'
+import {userMessage, sendMessage} from '../../actions/watson'
 
-const Chat = ({chat, userMessage}) => {
+const Chat = ({chat, userMessage, sendMessage}) => {
     // Handle user's message
     const [message, setMessage] = useState(''); 
 
@@ -15,6 +15,7 @@ const Chat = ({chat, userMessage}) => {
         if(code===13){
             console.log(message); 
             userMessage(message); 
+            sendMessage(message); 
             setMessage(""); 
         }
     };
@@ -35,4 +36,4 @@ const mapStateToProps = (state) => ({
     chat: state.watson.messages,
 });
 
-export default connect(mapStateToProps, {userMessage})(Chat); 
+export default connect(mapStateToProps, {userMessage, sendMessage})(Chat); 

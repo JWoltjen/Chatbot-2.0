@@ -1,5 +1,5 @@
 // import types 
-import {INPUT_SUCCESS, INPUT_FAIL, SESSION_SUCCESS, SESSION_FAIL} from '../actions/types'; 
+import {INPUT_SUCCESS, INPUT_FAIL, SESSION_SUCCESS, SESSION_FAIL, MESSAGE_SUCCESS, MESSAGE_FAIL} from '../actions/types'; 
 
 
 //initial state
@@ -33,6 +33,14 @@ export default (state = initialState, action) => {
             return{
                 ...state,
             };
+        case MESSAGE_SUCCESS:
+            return {
+                ...state
+            }
+        case MESSAGE_FAIL: 
+            return {
+                ...state
+            }
         default:
             return {
                 ...state,
