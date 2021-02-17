@@ -21,7 +21,7 @@ const Chat = ({chat, userMessage}) => {
     return (
         <div className="chat">
             <h1>Neumann the Chatbot</h1>
-            <div>Messages go here</div>
+            {chat.length === 0 ? "" : chat.map((msg)=> <div className={msg.type}>{msg.message}</div>)}
             <input 
                 id="chatBox" 
                 onChange={(e)=>setMessage(e.target.value)} 
