@@ -13,11 +13,16 @@ import Chat from './components/chat/Chat'
 import {createSession} from "./actions/watson"; 
 
 import axios from 'axios'; 
+
+  if(localStorage.session){
+    axios.defaults.headers.common["session_id"] = localStorage.session; 
+  } else {
+    delete axios.defaults.headers.common["session_id"]
+  }
 //connect application to redux
 
 const App = () => {
   useEffect(()=> {
-    //check if there is a session
     if(!localStorage.session){
       store.dispatch(createSession())
     }
