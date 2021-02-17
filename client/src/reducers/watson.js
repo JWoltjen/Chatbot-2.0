@@ -34,8 +34,10 @@ export default (state = initialState, action) => {
                 ...state,
             };
         case MESSAGE_SUCCESS:
+                messages = [...messages, {message:payload, type: "bot"}]
             return {
-                ...state
+                ...state, 
+                messages, 
             }
         case MESSAGE_FAIL: 
             return {
