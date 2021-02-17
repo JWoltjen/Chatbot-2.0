@@ -32,7 +32,7 @@ export default (state = initialState, action) => {
         case SESSION_FAIL:
             return{
                 ...state,
-            }
+            };
         default:
             return {
                 ...state,
