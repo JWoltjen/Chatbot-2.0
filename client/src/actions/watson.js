@@ -1,6 +1,6 @@
 //import types
-import {INPUT_SUCCESS, INPUT_FAIL} from './types'
-
+import {INPUT_SUCCESS, INPUT_FAIL, SESSION_SUCCESS, SESSION_FAIL, MESSAGE_SUCCESS, MESSAGE_FAIL} from './types'
+import axios from 'axios'
 // function that handles the message
 export const userMessage = (message) => async (dispatch) => {
     try{
@@ -11,5 +11,8 @@ export const userMessage = (message) => async (dispatch) => {
 }
 
 // creates a session - API call to backend 
+
+
+
 
 // Sends message to the bot -API call 
