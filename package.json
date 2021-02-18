@@ -5,8 +5,8 @@
   "main": "server.js",
   "scripts": {
     "start": "node server",
-    "server": "nodemon server", 
-    "client": "npm start --prefix client", 
+    "server": "nodemon server",
+    "client": "npm start --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client  \""
   },
   "author": "Jeff Woltjen",
@@ -15,9 +15,11 @@
     "concurrently": "^5.3.0",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
-    "ibm-watson": "^6.0.2"
+    "ibm-watson": "^6.0.2",
+    "redux-devtools": "^3.7.0"
   },
   "devDependencies": {
-    "nodemon": "^2.0.7"
+    "nodemon": "^2.0.7",
+    "redux-devtools-extension": "^2.13.8"
   }
 }
